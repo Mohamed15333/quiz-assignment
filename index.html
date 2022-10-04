@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>football quiz</title>
+</head>
+<body>
+    
+    <style>
+        body {
+          background-image: url('https://icdn.football-espana.net/wp-content/uploads/2022/01/Cristiano-Ronaldo-1020x638.jpeg');
+        }
+        </style>
+        <div calss="container">
+            <a href="#home.html" class="brand-logo center"> quiz</a>
+        </div>
+        <section class="containeer section">
+            <div class="col s12 16 offset-13">
+                <form class="myform" name="id" onsubmit="submitted(event)">
+                <h4 class="center-align white-text">CONTESTENT NAME</h4>
+            
+                <div class="progress yellow">
+                    <div class="indeterminate"></div>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="material-icons white-text">account_box</i>
+                        <input type="text" class="white-text" id="name">
+                        <label for="name"> name here</label>
+                        <p class="center"><button type="submit" class="btn blue" 
+                        onclick="this.style.display='none'">submit name</button></p>
+                    </div>
+
+                    <div>
+                        <p class="white-text green"> quiz rules :</p>
+                        <p class="black-text white">1 good luck when attempting</p>
+                        <p class="black-text white">2 you cannot go to previous question</p>
+                        <p class="black-text white">3 no skipping once you start</p>                 
+                    </div>
+
+                    <div class="progress yellow">
+                        <div class="indeterminate"></div>
+                        </div>
+
+                        <p class="center"><a href="quiz.html" class="btn blue">Let's start</a></p>
+            </form>
+            </div>
+        </section>
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <script>
+            function submitted(e){
+                e.preventDefault();
+
+                let namee = document.forms["id"]["name"].value;
+                sessionstorage.setitem("name", namee);
+            }
+        </script>
+</body>
+</html>
